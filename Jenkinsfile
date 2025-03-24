@@ -52,7 +52,7 @@ pipeline {
 	            }
 	        }
 	
-
+     q
 	         // Deploy Stages
 	        stage('Deploy to UAT') {
 	            steps {
@@ -62,7 +62,7 @@ pipeline {
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
 	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-	                environments: '',
+	                environments: "${UIPATH_ORCH_FOLDER_NAME}",
 			createProcess: "TestJenkins",
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
