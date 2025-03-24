@@ -52,7 +52,7 @@ pipeline {
 	            }
 	        }
 	
-     q
+     
 	         // Deploy Stages
 	        stage('Deploy to UAT') {
 	            steps {
