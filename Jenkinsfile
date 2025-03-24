@@ -61,7 +61,9 @@ pipeline {
 	                packagePath: "Output\\${env.BUILD_NUMBER}",
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
 	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",	                
+	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+			environments: "",
+			createProcess: "TestJenkins"	                
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '3_9hjqr09PIeURMDsodKOUqAfDaD5PFHWIIPYzeNhefIR'), 
 					traceLevel: 'None',
